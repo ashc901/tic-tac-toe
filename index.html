@@ -24,8 +24,8 @@
           <input type = "submit" value="Sign Up">
         </form>
     </section>
-    <hr>
-    <section class = "sign-in">
+    <hr class="etc">
+    <section class = "sign-in" >
       <form id="sign-in">
         <h2>Sign in here!</h2>
         <input name="credentials[email]" type="email" placeholder="Look at that email" required>
@@ -33,15 +33,18 @@
         <button>Sign in</button>
       </form>
     </section>
-    <hr>
-    <section class = "change-password">
+    <hr class="etc">
+    <section class = "signed-in" style="display:none">
       <form id = "change-password">
-        <h2>Change Password</h2>
+        <h4>Change Password</h4>
         <input type= "password" name="passwords[old]" placeholder="old password">
         <input type="password" name="passwords[new]" placeholder="newer, sexier password">
         <input type="submit" value="Change Password">
       </form>
     </section>
     <br>
+    <section class = "signed-in" style="display:none">
+      <button id="sign-out">Sign Out</button>
+    </section>
     </body>
 </html>

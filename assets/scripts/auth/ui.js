@@ -9,10 +9,27 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Woowoo! You logged in!')
   $('#sign-in').trigger('reset')
-//  $('#change-password').show()
-//  $('#sign-out').show()
-//  $('#sign-up').hide()
-//  $('#sign-in').hide()
+  $('.signed-in').show()
+  $('#sign-out').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('.etc').hide()
+}
+
+const onChangePasswordSuccess = function (){
+  $('#message').text("Good job changin' your dang ole password" )
+  $('#change-password').trigger('reset')
+
+}
+
+const onSignOutSuccess = function () {
+  $('#message').text("Awe, dip. You're leavin' me?")
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
+  stor.user = null
+
 }
 
 const onError = function(err) {
@@ -22,5 +39,7 @@ const onError = function(err) {
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
+  onChangePasswordSuccess,
+  onSignOutSuccess,
   onError
 }

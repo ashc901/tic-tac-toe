@@ -4,7 +4,9 @@ const store = require('../store')
 const onSignUpSuccess = function (response) {
   $('#message').text("Look at you creatin' an account!")
 }
-
+// modify class selection to better fit my coodin' needs
+// before it was selecting an ID, now an overall class
+// see html comments, it got weird
 const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Woowoo! You logged in!')

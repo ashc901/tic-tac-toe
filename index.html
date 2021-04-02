@@ -13,8 +13,10 @@
     </head>
     <body>
       <h1>Welcome to Tic-Tac-Toe!</h1>
+      <!-- success and error messages here -->
       <h3 id = "message"></h3>
       <hr>
+      <!-- sign up form, nothing special so far -->
       <section class= "sign-up">
         <form id ="sign-up">
           <h2>Sign up here!</h2>
@@ -24,7 +26,9 @@
           <input type = "submit" value="Sign Up">
         </form>
     </section>
+    <!-- hr class "etc" so that I can get rid of the extra lines when signed in with .hide -->
     <hr class="etc">
+    <!-- sign in form, nothing special again -->
     <section class = "sign-in" >
       <form id="sign-in">
         <h2>Sign in here!</h2>
@@ -33,7 +37,9 @@
         <button>Sign in</button>
       </form>
     </section>
+    <!-- same as before -->
     <hr class="etc">
+    <!-- had to add a new class to make the jquery .hide and .show functions work properly with class "signed-in" didn't actually feel like it changed anything until suddenly things worked woooweeeeeeeeeee-->
     <section class = "signed-in" style="display:none">
       <form id = "change-password">
         <h4>Change Password</h4>
@@ -43,6 +49,7 @@
       </form>
     </section>
     <br>
+    <!-- same section class specialty as before- SELECTION AAAHHHHHH -->
     <section class = "signed-in" style="display:none">
       <button id="sign-out">Sign Out</button>
     </section>

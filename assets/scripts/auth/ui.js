@@ -16,6 +16,7 @@ const onSignInSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('.etc').hide()
+  $('.game').show()
 }
 
 const onChangePasswordSuccess = function (){
@@ -30,8 +31,8 @@ const onSignOutSuccess = function () {
   $('#change-password').hide()
   $('#sign-in').show()
   $('#sign-up').show()
-  stor.user = null
-
+  store.user = null
+  $('#game').hide()
 }
 
 const onError = function(err) {

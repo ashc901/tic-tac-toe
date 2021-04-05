@@ -1,8 +1,32 @@
 @import '~bootstrap/scss/bootstrap';
-
-.container {
-  align-items:center;
-  justify-content: center;
+body {
+  background-color: #E6E1C6;
+  position: relative;
+  text-align: center;
+  
+}
+// h1 {
+//   text-align: center;
+//
+// }
+// h3 {
+//   text-align: center;
+// }
+// h2{
+//   text-align: center;
+// }
+//
+// #sign-up {
+//   margin: auto;
+// }
+// #sign-in {
+//
+// }
+.row {
+  margin: 0 auto;
+}
+.game{
+  margin: 0 auto;
 
 }
 .row {

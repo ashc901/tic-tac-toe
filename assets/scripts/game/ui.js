@@ -7,6 +7,11 @@ const onNewGameSuccess = function () {
   // should I hide the change password until after the game is over? come back to this
   $('#new-game').show()
 }
+
+// const onMoveSuccess = function () {
+//
+// }
 module.exports = {
-  onNewGameSuccess
+  onNewGameSuccess,
+  //onMoveSuccess
 }

@@ -14,6 +14,11 @@ const newGame = function() {
   })
 }
 
+// const newMove = function() {
+//   return $.ajax({
+//
+//   })
+// }
 module.exports = {
   newGame
 }

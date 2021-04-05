@@ -17,9 +17,10 @@
       <h3 id = "message"></h3>
       <hr>
       <!-- sign up form, nothing special so far -->
-      <section class= "sign-up">
+      <section>
+        <h2>Sign up here!</h2>
         <form id ="sign-up">
-          <h2>Sign up here!</h2>
+
           <input type="email" name="credentials[email]" placeholder="123@email.com" required>
           <input type="password" name="credentials[password]" placeholder="a great password" required>
           <input type="password" name="credentials[password_confirmation]" placeholder="a great password again" required>
@@ -29,16 +30,16 @@
     <!-- hr class "etc" so that I can get rid of the extra lines when signed in with .hide -->
     <hr class="etc">
     <!-- sign in form, nothing special again -->
-    <section class = "sign-in" >
+    <section>
+      <h2>Sign in here!</h2>
       <form id="sign-in">
-        <h2>Sign in here!</h2>
+
         <input name="credentials[email]" type="email" placeholder="Look at that email" required>
         <input name="credentials[password]" type="password" placeholder="Fine ass password" required>
         <button>Sign in</button>
       </form>
     </section>
-    <!-- same as before -->
-    <hr class="etc">
+
     <!-- had to add a new class to make the jquery .hide and .show functions work properly with class "signed-in" didn't actually feel like it changed anything until suddenly things worked woooweeeeeeeeeee-->
     <!-- you can change this to the css file later, move on and don't worry too much -->
 
@@ -66,38 +67,40 @@
     <section class = "game" style="display:none">
       <button id ="new-game">NEW GAME</button>
       <hr>
-      <div class= "container">
+      <div id= "container">
 
         <div class="row">
 
-          <div class="col mx-auto">
+          <div id="0" class="col">
 
           </div>
 
-          <div class="col mx-auto">
+          <div id="1" class="col">
 
           </div>
 
-          <div class="col mx-auto">
+          <div id="2" class="col">
 
           </div>
 
         </div>
 
         <div class="row">
-          <div class="col mx-auto">
+          <div id="3" class="col">
           </div>
-          <div class="col mx-auto">
+          <div id="4"class="col">
           </div>
-          <div class="col mx-auto">
+          <div id="5" class="col">
           </div>
         </div>
+
+
         <div class="row">
-          <div class="col mx-auto">
+          <div id="6" class="col">
           </div>
-          <div class="col mx-auto">
+          <div id="7" class="col">
           </div>
-          <div class="col mx-auto">
+          <div id="8" class="col">
           </div>
         </div>
       </div>

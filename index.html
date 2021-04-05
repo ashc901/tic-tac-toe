@@ -20,9 +20,9 @@
       <section class= "sign-up">
         <form id ="sign-up">
           <h2>Sign up here!</h2>
-          <input type="email" name="credentials[email]" placeholder="123@email.com">
-          <input type="password" name="credentials[password]" placeholder="a great password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="a great password again">
+          <input type="email" name="credentials[email]" placeholder="123@email.com" required>
+          <input type="password" name="credentials[password]" placeholder="a great password" required>
+          <input type="password" name="credentials[password_confirmation]" placeholder="a great password again" required>
           <input type = "submit" value="Sign Up">
         </form>
     </section>
@@ -41,7 +41,10 @@
     <hr class="etc">
     <!-- had to add a new class to make the jquery .hide and .show functions work properly with class "signed-in" didn't actually feel like it changed anything until suddenly things worked woooweeeeeeeeeee-->
     <!-- you can change this to the css file later, move on and don't worry too much -->
-    <section class = "signed-in" style="display:none">
+
+<!-- had a change password, broke it, commented it out -->
+
+    <!-- <section class = "signed-in" style="display:none">
       <form id = "change-password">
         <h4>Change Password</h4>
         <input type= "password" name="passwords[old]" placeholder="old password">
@@ -49,7 +52,7 @@
         <input type="submit" value="Change Password">
       </form>
     </section>
-    <br>
+    <br> -->
     <!-- same section class specialty as before- SELECTION AAAHHHHHH -->
     <!-- ...yeah -->
     <section class = "signed-in" style="display:none">
@@ -57,41 +60,44 @@
     </section>
     <hr>
 
+
+
     <!-- change the css here too -->
     <section class = "game" style="display:none">
       <button id ="new-game">NEW GAME</button>
       <hr>
-      <div class= "container"> <!--style="display:none"-->
+      <div class= "container">
 
         <div class="row">
-          <div class="col">
+
+          <div class="col mx-auto">
 
           </div>
 
-          <div class="col">
+          <div class="col mx-auto">
 
           </div>
 
-          <div class="col">
+          <div class="col mx-auto">
 
           </div>
 
         </div>
 
         <div class="row">
-          <div class="col">
+          <div class="col mx-auto">
           </div>
-          <div class="col">
+          <div class="col mx-auto">
           </div>
-          <div class="col">
+          <div class="col mx-auto">
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col mx-auto">
           </div>
-          <div class="col">
+          <div class="col mx-auto">
           </div>
-          <div class="col">
+          <div class="col mx-auto">
           </div>
         </div>
       </div>

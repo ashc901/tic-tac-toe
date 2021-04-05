@@ -25,16 +25,16 @@ const signIn = function(data) {
   })
 }
 
-const changePassword = function(data) {
-  return $.ajax({
-    method: 'PATCH',
-    url: config.apiUrl + "/change-password",
-    data: data,
-    headers: {
-      Authorization: 'Bearer' + store.user.token
-    }
-  })
-}
+// const changePassword = function(data) {
+//   return $.ajax({
+//     method: 'PATCH',
+//     url: config.apiUrl + "/change-password",
+//     data: data,
+//     headers: {
+//       Authorization: 'Bearer' + store.user.token
+//     }
+//   })
+// }
 
 const signOut = function() {
   return $.ajax({
@@ -48,6 +48,6 @@ const signOut = function() {
 module.exports = {
   signUp,
   signIn,
-  changePassword,
+  // changePassword,
   signOut
 }

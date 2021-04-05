@@ -17,9 +17,11 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('.etc').hide()
   $('.game').show()
+
 }
 
 const onChangePasswordSuccess = function (){
+
   $('#message').text("Good job changin' your dang ole password" )
   $('#change-password').trigger('reset')
 

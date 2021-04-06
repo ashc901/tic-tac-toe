@@ -14,11 +14,16 @@ const newGame = function() {
   })
 }
 
-const newMove = function() {
-  return $.ajax({
-
-  })
-}
+// const newMove = function() {
+//   return $.ajax({
+//     method: 'PATCH',
+//     url: config.apiUrl + "/games:" + ${ID}
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
 module.exports = {
-  newGame
+  newGame,
+  //newMove
 }

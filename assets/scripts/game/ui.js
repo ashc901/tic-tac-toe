@@ -10,6 +10,14 @@ const onNewGameSuccess = function (data) {
 }
 
 // const onMoveSuccess = function () {
+//   console.log('click')
+//
+//   const cell = $(event.target)
+//
+//   box.text(currentPlayer)
+//
+//   currentPlayer = currentPlayer === 'O' ? 'X' : 'O'
+//
 //
 // }
 module.exports = {

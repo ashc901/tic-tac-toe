@@ -3,38 +3,45 @@ body {
   background-color: #E6E1C6;
   position: relative;
   text-align: center;
-  
-}
-// h1 {
-//   text-align: center;
-//
-// }
-// h3 {
-//   text-align: center;
-// }
-// h2{
-//   text-align: center;
-// }
-//
-// #sign-up {
-//   margin: auto;
-// }
-// #sign-in {
-//
-// }
-.row {
-  margin: 0 auto;
-}
-.game{
-  margin: 0 auto;
 
 }
+
 .row {
+  margin: 0 auto;
   width: 450px;
+  //background-color: #F5F0D7;
 
-
+  //font-size
+  //text-shadow: 4px 2px rgba(0, 0, 0, .25)
 }
+
 .col {
-  border: 1px solid black;
+  border-right: 1px solid black;
+  // border-bottom: 1px solid black;
   height: 100px;
+
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  &:hover {
+    background-color: #BEB99E;
+  }
+  //user-select: none;
+
+
+  // min-height: calc(100% / 3);
+  // &:nth-last-child(-1n) {
+  //   border-bottom: 0;
+  // }
 }
+.one {
+  border-bottom: 1px solid black;
+}
+.two {
+  border-bottom: 1px solid black;
+}
+
+// guess i'll just have an extra line at the bottom for now
+// .row .three {
+//   border-bottom: 0;
+// }

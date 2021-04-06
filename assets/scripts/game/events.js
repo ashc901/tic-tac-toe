@@ -11,16 +11,17 @@ const onNewGame = function(event) {
     .catch(ui.onError)
 }
 
-const onMove = function(event) {
-  event.preventDefault()
-
-  api.newMove()
-    .then(ui.onMoveSuccess)
-    .catch(ui.onError)
-}
+// const onMove = function(event) {
+//   event.preventDefault()
+//
+//
+//   api.newMove()
+//     .then(ui.onMoveSuccess)
+//     .catch(ui.onError)
+// }
 
 
 module.exports = {
   onNewGame,
-  onMove
+  //onMove
 }

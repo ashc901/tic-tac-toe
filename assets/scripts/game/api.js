@@ -23,12 +23,12 @@ const newMove = function() {
       Authorization: 'Bearer ' + store.user.token
     },
   data:  {
-  "game": {
-    "cell": {
-      "index": 0,
-      "value": "x"
+  game: {
+    cell: {
+      index: 0,
+      value: "x"
     },
-    "over": false
+    over: false
   }
 }
   })

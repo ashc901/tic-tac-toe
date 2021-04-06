@@ -9,11 +9,11 @@ const onNewGameSuccess = function (data) {
   $('#game-board').show()
 }
 
-const onMoveSuccess = function () {
+const onMoveSuccess = function (response) {
   console.log('click')
+  store.cells = response.cells
 
-  const cell = $(event.target)
-  cell.text(currentPlayer)
+  
 
 
 

@@ -9,18 +9,16 @@ const onNewGameSuccess = function (data) {
   $('#game-board').show()
 }
 
-// const onMoveSuccess = function () {
-//   console.log('click')
-//
-//   const cell = $(event.target)
-//
-//   box.text(currentPlayer)
-//
-//   currentPlayer = currentPlayer === 'O' ? 'X' : 'O'
-//
-//
-// }
+const onMoveSuccess = function () {
+  console.log('click')
+
+  const cell = $(event.target)
+  cell.text(currentPlayer)
+
+
+
+}
 module.exports = {
   onNewGameSuccess,
-  //onMoveSuccess
+  onMoveSuccess
 }

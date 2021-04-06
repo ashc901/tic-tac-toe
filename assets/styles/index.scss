@@ -40,7 +40,11 @@ body {
 .two {
   border-bottom: 1px solid black;
 }
-
+#sign-out {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
 // guess i'll just have an extra line at the bottom for now
 // .row .three {
 //   border-bottom: 0;

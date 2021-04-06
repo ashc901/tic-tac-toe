@@ -10,18 +10,29 @@ const onNewGame = function(event) {
     .then(ui.onNewGameSuccess)
     .catch(ui.onError)
 }
+//need to access index
+const onMove = function(event) {
+  event.preventDefault()
 
-// const onMove = function(event) {
-//   event.preventDefault()
-//
-//
-//   api.newMove()
-//     .then(ui.onMoveSuccess)
-//     .catch(ui.onError)
-// }
+  const cell = $(event.target)
+  if (cell.text() === ' ' ) {
+    cell.text(currentPlayer)
+    if(currentPlayer === 'X') {
+      let currentPlayer ='O'
+    } else {
+      let currentPlayer = 'X'
+    }
+
+  }
+
+
+  api.newMove()
+    .then(ui.onMoveSuccess)
+    .catch(ui.onError)
+}
 
 
 module.exports = {
   onNewGame,
-  //onMove
+  onMove
 }

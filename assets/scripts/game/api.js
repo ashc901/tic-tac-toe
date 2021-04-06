@@ -14,16 +14,26 @@ const newGame = function() {
   })
 }
 
-// const newMove = function() {
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: config.apiUrl + "/games:" + ${ID}
-//     headers: {
-//       Authorization: 'Bearer ' + store.user.token
-//     }
-//   })
-// }
+const newMove = function() {
+  console.log(store.game)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + "/games/" + store.game._id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+  data:  {
+  "game": {
+    "cell": {
+      "index": 0,
+      "value": "x"
+    },
+    "over": false
+  }
+}
+  })
+}
 module.exports = {
   newGame,
-  //newMove
+  newMove
 }

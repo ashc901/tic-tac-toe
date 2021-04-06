@@ -9,7 +9,7 @@ body {
 .row {
   margin: 0 auto;
   width: 450px;
-  //background-color: #F5F0D7;
+
 
   //font-size
   //text-shadow: 4px 2px rgba(0, 0, 0, .25)
@@ -17,7 +17,7 @@ body {
 
 .col {
   border-right: 1px solid black;
-  // border-bottom: 1px solid black;
+
   height: 100px;
 
   &:nth-child(3n) {
@@ -29,10 +29,7 @@ body {
   //user-select: none;
 
 
-  // min-height: calc(100% / 3);
-  // &:nth-last-child(-1n) {
-  //   border-bottom: 0;
-  // }
+
 }
 .one {
   border-bottom: 1px solid black;
@@ -45,7 +42,3 @@ body {
   top: 10px;
   left: 10px;
 }
-// guess i'll just have an extra line at the bottom for now
-// .row .three {
-//   border-bottom: 0;
-// }

@@ -18,9 +18,9 @@
       <hr>
       <!-- sign up form, nothing special so far -->
       <section>
-        <h2>Sign up here!</h2>
-        <form id ="sign-up">
 
+        <form id ="sign-up">
+          <h2>Sign up here!</h2>
           <input type="email" name="credentials[email]" placeholder="123@email.com" required>
           <input type="password" name="credentials[password]" placeholder="a great password" required>
           <input type="password" name="credentials[password_confirmation]" placeholder="a great password again" required>
@@ -31,9 +31,9 @@
     <hr class="etc">
     <!-- sign in form, nothing special again -->
     <section>
-      <h2>Sign in here!</h2>
-      <form id="sign-in">
 
+      <form id="sign-in">
+        <h2>Sign in here!</h2>
         <input name="credentials[email]" type="email" placeholder="Look at that email" required>
         <input name="credentials[password]" type="password" placeholder="Fine ass password" required>
         <button>Sign in</button>
@@ -67,40 +67,33 @@
     <section class = "game" style="display:none">
       <button id ="new-game">NEW GAME</button>
       <hr>
-      <div id= "container">
+      <div id= "game-board">
 
         <div class="row">
-
-          <div id="0" class="col">
-
+          <div data-cell-index='0' class="col">
           </div>
-
-          <div id="1" class="col">
-
+          <div data-cell-index='1' class="col">
           </div>
-
-          <div id="2" class="col">
-
+          <div data-cell-index='2' class="col">
           </div>
-
         </div>
 
         <div class="row">
-          <div id="3" class="col">
+          <div data-cell-index='3' class="col">
           </div>
-          <div id="4"class="col">
+          <div data-cell-index='4' class="col">
           </div>
-          <div id="5" class="col">
+          <div data-cell-index='5' class="col">
           </div>
         </div>
 
 
         <div class="row">
-          <div id="6" class="col">
+          <div data-cell-index='6' class="col">
           </div>
-          <div id="7" class="col">
+          <div data-cell-index='7' class="col">
           </div>
-          <div id="8" class="col">
+          <div data-cell-index='8' class="col">
           </div>
         </div>
       </div>

@@ -37,22 +37,16 @@ const onMove = function() {
   $('#message').text("That's illegal!")
 }
 }
-  // const index = event.target.id
-  //   const cell = $(event.target)
-  //   if (cell.text() === '') {
-  //     cell.text(currentPlayer)
-  //     if(currentPlayer === 'X') {
-  //       let currentPlayer ='O'
-  //       cell.text(currentPlayer)
-  //     } else {
-  //       let currentPlayer = 'X'
-  //     }
 
+// const onReset = function () {
+//   $('#game-board').trigger('reset')
+// }
 
 
 
 
 module.exports = {
   onNewGame,
-  onMove
+  onMove,
+//  onReset
 }

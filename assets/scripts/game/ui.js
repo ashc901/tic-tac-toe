@@ -6,7 +6,9 @@ const onNewGameSuccess = function (data) {
   console.log(data.game.cells)
   $('#message').text("Woooaaahhh, you wanna GO?!")
   // should I hide the change password until after the game is over? come back to this
-  $('#game-board').show()
+  $('#game-board').show().trigger('reset')
+  //$('#game-board').trigger('reset')
+  $('.col').text('')
 }
 
 const onMoveSuccess = function (response) {

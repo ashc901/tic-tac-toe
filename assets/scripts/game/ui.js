@@ -13,11 +13,8 @@ const onMoveSuccess = function (response) {
   console.log('click')
   store.cells = response.cells
 
-  
-
-
-
 }
+
 module.exports = {
   onNewGameSuccess,
   onMoveSuccess

@@ -20,21 +20,23 @@ const onMove = function() {
   const cell = $(event.target)
   if (cell.text() === '') {
     cell.text(currentPlayer)
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
-  } else {
-    ui.onMoveSuccess()
-  }
-  const value = $(event.target).text()
-  if(currentPlayer === 'X'){
-    $('#message').text('Turn: X')
-  } else {
-    $('#message').text('Turn: 0')
-  }
+    api.newMove()
+      .then(ui.onMoveSuccess)
+      .catch(ui.onError)
 
-  api.newMove()
-    .then(ui.onMoveSuccess)
-    .catch(ui.onError)
-  }
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+    if(currentPlayer === 'X'){
+      $('#message').text('Turn: X')
+    }else {
+      $('#message').text('Turn: 0')
+    }
+
+  const value = $(event.target).text()
+} else {
+  //for some reason I couldn't target the onError function that was already written
+  $('#message').text("That's illegal!")
+}
+}
   // const index = event.target.id
   //   const cell = $(event.target)
   //   if (cell.text() === '') {

@@ -38,15 +38,11 @@ const onMove = function() {
 }
 }
 
-// const onReset = function () {
-//   $('#game-board').trigger('reset')
-// }
-
 
 
 
 module.exports = {
   onNewGame,
   onMove,
-//  onReset
+  currentPlayer
 }

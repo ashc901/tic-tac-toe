@@ -10,10 +10,11 @@ const onNewGameSuccess = function (data) {
   //$('#game-board').trigger('reset')
   $('.col').text('')
 }
-
+// const index = event.target.id
+// const cell = $(event.target)
 const onMoveSuccess = function (response) {
   console.log('click')
-  store.cells = response.cells
+  store.game.cells = response.cells
 
   //checking winner
   if(cell[0] === cell[3] && cell[0] === cell[6]){

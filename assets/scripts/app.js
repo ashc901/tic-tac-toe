@@ -9,8 +9,8 @@ const authEvents = require('./auth/events.js')
 const gameEvents = require('./game/events.js')
 
 $(() => {
-  //why did this work this time? it didn't work for the sign out button, just broke the function?????
   $('#game-board').hide()
+  //why did this work this time? it didn't work for the sign out button, just broke the function?????
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)

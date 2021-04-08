@@ -35,7 +35,9 @@ const onSignOutSuccess = function () {
   $('#sign-in').show()
   $('#sign-up').show()
   store.user = null
-  $('#game').hide()
+  $('.game').hide()
+  $('.col').text('')
+  $('#game-board').hide()
 }
 
 const onError = function(err) {

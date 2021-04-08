@@ -26,9 +26,9 @@ const newMove = function() {
   game: {
     cell: {
       index: 0,
-      value: "x"
+      value: "X"
     },
-    over: false
+    over: null
   }
 }
   })

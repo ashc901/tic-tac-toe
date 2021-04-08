@@ -1,7 +1,7 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields.js')
-
+const store = require('../store')
 //
 const onNewGame = function(event) {
   event.preventDefault()
@@ -15,8 +15,9 @@ const onNewGame = function(event) {
 let currentPlayer= 'X'
 
 const onMove = function() {
-//  event.preventDefault()
-  const index = event.target.id
+
+api.newMove(gameIndex, store.onMove, store.over)
+  const gameIndex = event.target.id
   const cell = $(event.target)
   if (cell.text() === '') {
     cell.text(currentPlayer)

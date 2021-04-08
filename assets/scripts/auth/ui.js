@@ -17,6 +17,7 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('.etc').hide()
   $('.game').show()
+  $('#sign-up').trigger('reset')
 
 }
 

@@ -14,7 +14,7 @@ const newGame = function() {
   })
 }
 
-const newMove = function() {
+const newMove = function(gameIndex, currentPlayer) {
   console.log(store.game)
   return $.ajax({
     method: 'PATCH',
@@ -25,10 +25,10 @@ const newMove = function() {
   data:  {
   game: {
     cell: {
-      index: 0,
-      value: "X"
+      index: parseInt(gameIndex),
+      value: currentPlayer
     },
-    over: null
+    over: store.over
   }
 }
   })

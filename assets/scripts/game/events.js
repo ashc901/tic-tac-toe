@@ -2,6 +2,8 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields.js')
 const store = require('../store')
+
+
 //
 const onNewGame = function(event) {
   event.preventDefault()
@@ -10,113 +12,131 @@ const onNewGame = function(event) {
     .then(ui.onNewGameSuccess)
     .catch(ui.onError)
 }
-//need to access index
-
-let currentPlayer= 'X'
 
 const onMove = function(event) {
-
+  if(store.currentPlayer === 'X'){
+    $('#game-message').text('Turn: 0')
+  }else {
+    $('#game-message').text('Turn: X')
+  }
 
   const gameIndex = event.target.id
   console.log(gameIndex)
   const cell = $(event.target)
   if (cell.text() === '') {
-    cell.text(currentPlayer)
+    console.log(store.cells)
+    cell.text(store.currentPlayer)
     store.cells[gameIndex] = store.currentPlayer
-console.log(store)
+//console.log(store)
+
 //using boolean logic to check if it's an empty array
+//(store.cells[at index] && basically checks if it's "true" meaning it has an x or o in the index), comes back false if it's empty because ''(emptystring) is falsey
     if(store.cells[0] && (store.cells[0] === store.cells[3] && store.cells[0] === store.cells[6])){
-      store.over = true
-      if (currentPlayer === 'X'){
-        $('#message').text('X won!')
+      //tells the store to change to true so that the game will be over
+      //store.over = true
+      if (store.currentPlayer === 'X'){
+        $('#game-message').text('X won!')
       } else {
-        $('message').text('O won!')
+        $('#game-message').text('O won!')
       }
 
     } else if (store.cells[0] && (store.cells[0] === store.cells[1] && store.cells[0] === store.cells[2])) {
-      store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+      //store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if (store.cells[0] && (store.cells[0] === store.cells[4] && store.cells[0] === store.cells[8])) {
-    store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+    //store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if (store.cells[1] && (store.cells[1] === store.cells[4] && store.cells[1] === store.cells[7])) {
-    store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+    //store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if (store.cells[2] && (store.cells[2] === store.cells[5] && store.cells[2] === store.cells[8])) {
-    store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+    //store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if (store.cells[2] && (store.cells[2] === store.cells[4] && store.cells[2] === store.cells[6])) {
-    store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+    //store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if (store.cells[3] && (store.cells[3] === store.cells[4] && store.cells[3] === store.cells[5])) {
-    store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+    //store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if (store.cells[6] && (store.cells[6] === store.cells[7] && store.cells[6] === store.cells[8])){
-    store.over = true
-    if (currentPlayer === 'X'){
-      $('#message').text('X won!')
+  //  store.over = true
+    if (store.currentPlayer === 'X'){
+      $('#game-message').text('X won!')
     } else {
-      $('message').text('O won!')
+      $('#game-message').text('O won!')
     }
 
   } else if(store.cells[0] && store.cells[1] && store.cells[2] && store.cells[3] && store.cells[4] && store.cells[5] && store.cells[6] && store.cells[7] && store.cells[8]){
-    store.over = true
-      $('#message').text("It's a draw!")
+  //  store.over = true
+      $('#game-message').text("It's a draw!")
     }
-    api.newMove(gameIndex, currentPlayer)
+
+
+    api.newMove(gameIndex, store.currentPlayer)
       .then(ui.onMoveSuccess)
       .catch(ui.onError)
 
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
-    store.currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
-    if(currentPlayer === 'X'){
-      $('#message').text('Turn: X')
-    }else {
-      $('#message').text('Turn: 0')
-    }
+
 
   const value = $(event.target).text()
 } else {
   //for some reason I couldn't target the onError function that was already written
-  $('#message').text("That's illegal!")
+  $('#game-message').text("That's illegal!")
 }
+
 }
+// const over = function (onMove) {
+//   if (store.over = true)
+//   currentPlayer = 'X'
+// }
+// let currentPlayer = 'X'
+//
+// // const onMoveChange = function() {
+// //   if (store.over = false){
+// //     store.currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+// //   }
+// // }
+//
+//let currentPlayer = 'X'
+
+
+
+//     //store in the array in store.js
 
 
 
 
 module.exports = {
   onNewGame,
-  onMove,
-  currentPlayer
+  onMove
 }

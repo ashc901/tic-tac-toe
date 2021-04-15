@@ -5,26 +5,28 @@ const onNewGameSuccess = function (data) {
   store.game = data.game
   console.log(data.game._id)
   console.log("this is the new game\n", store.game.cells)
+
+  console.log("====")
+  console.log("store current player", store.currentPlayer)
   $('#message').text("Woooaaahhh, you wanna GO?!")
   // should I hide the change password until after the game is over? come back to this
   $('#game-board').show()
-  //$('#game-board').trigger('reset')
   $('#game-message').show()
-  $('#game-message').text(`It is ${store.currentPlayer}'s turn`)
-//  $('#game-message').empty()
-  $('.col').text('')
-  //$('#game-message').text('Turn: X')
+  $('#game-message').text('Turn: X')
+  $('.col').empty()
+  //store.over = false
+
   //need to make sure it sets back to turn: x
 }
-// const index = event.target.id
-// const cell = $(event.target)
+
 
 const onMoveSuccess = function (response) {
-  console.log('click')
+  //console.log('click')
   store.game = response.game
-  console.log(response)
+//  console.log(response)
   const cell = response.game.cells
   if (store.currentPlayer === 'X'){
+
     store.currentPlayer = 'O'
   //  $('#game-message').text(`It is ${store.currentPlayer}'s turn`)
   } else {
@@ -36,9 +38,15 @@ const onMoveSuccess = function (response) {
 
 }
 
-
+const onWinSuccess = function (response) {
+  if (store.over = true) {
+    $('#message').text('Wanna go again?!')
+    store.over = false
+  }
+}
 
 module.exports = {
   onNewGameSuccess,
-  onMoveSuccess
+  onMoveSuccess,
+  onWinSuccess
 }

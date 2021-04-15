@@ -15,7 +15,7 @@ const newGame = function() {
 }
 
 const newMove = function(gameIndex, currentPlayer) {
-  console.log(store.game)
+//  console.log(store.game)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + "/games/" + store.game._id,
@@ -28,7 +28,7 @@ const newMove = function(gameIndex, currentPlayer) {
         index: parseInt(gameIndex),
         value: currentPlayer
       },
-    over: store.over
+    over: false
     }
   }
   })

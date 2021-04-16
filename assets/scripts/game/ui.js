@@ -14,7 +14,7 @@ const onNewGameSuccess = function (data) {
   $('#game-message').show()
   $('#game-message').text('Turn: X')
   $('.col').empty()
-  //store.over = false
+  store.over = false
 
   //need to make sure it sets back to turn: x
 }
@@ -22,6 +22,9 @@ const onNewGameSuccess = function (data) {
 
 const onMoveSuccess = function (response) {
   //console.log('click')
+//  if(store.game.over = false){
+
+
   store.game = response.game
 //  console.log(response)
   const cell = response.game.cells
@@ -35,18 +38,21 @@ const onMoveSuccess = function (response) {
   }
 //store the move in the array
 //after a game is won, and new game button is clicked, current player needs to be set to x
+// } else {
+//   $('.col').text('')
+ //}
 
 }
 
-const onWinSuccess = function (response) {
-  if (store.over = true) {
-    $('#message').text('Wanna go again?!')
-    store.over = false
-  }
-}
+// const onWinSuccess = function (response) {
+//   if (store.game.over = true) {
+//     $('#message').text('Wanna go again?!')
+//     store.game.over = false
+//   }
+// }
 
 module.exports = {
   onNewGameSuccess,
   onMoveSuccess,
-  onWinSuccess
+  //onWinSuccess
 }
